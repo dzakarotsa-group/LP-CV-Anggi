@@ -175,23 +175,24 @@
       position: relative;
       max-width: 360px;
       height: 360px;
-      margin: 24px auto;
+      margin: 35px auto;
       overflow: hidden;
       border-radius: 14px;
     }
 
     .testimonial-slider img {
-      position: absolute;
-      inset: 0;
-      width: 60%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      border-radius: 14px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-
+  position: absolute;
+  top: 0;
+  left: 50%;  /* ← tambahkan ini */
+  transform: translateX(-50%);  /* ← dan ini */
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
     .testimonial-slider img.active {
       opacity: 1;
       z-index: 1;
